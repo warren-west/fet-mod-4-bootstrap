@@ -10,6 +10,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -27,27 +28,35 @@
 
         <div id="carouselPokedex" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
+                
+                <!-- first carousel item -->
                 <div class="carousel-item active" data-bs-interval="10000">
-                    
+
                     <div class="card col-12 col-sm-8 col-lg-6 mx-auto">
-                        <h5 class="card-title p-4 mx-auto h3">#1 Bulbasaur</h5>
-                        <img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" class="card-img-top w-75 mx-auto"
-                            alt="bulbasaur">
+                        <h5 id="pokemon-header" class="card-title p-4 mx-auto h3"></h5>
+                        <img id="pokemon-img" class="card-img-top w-75 mx-auto">
                         <div class="card-body">
-                            <p class="card-text">Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and
-                                a green
-                                bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that
-                                grows into
-                                a flower as it evolves.</p>
+                            <p id="pokemon-description" class="card-text"></p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><span class="fw-bold">HP:</span> 45</li>
-                            <li class="list-group-item"><span class="fw-bold">Attack:</span> 49</li>
-                            <li class="list-group-item"><span class="fw-bold">Defense:</span> 49</li>
+                            <li class="list-group-item"><i class="bi bi-heart text-danger"></i><span id="pokemon-hp"
+                                    class="fw-bold"></span></li>
+                            <li class="list-group-item"><i class="bi bi-lightning-charge text-info"></i><span
+                                    id="pokemon-attack" class="fw-bold"></span></li>
+                            <li class="list-group-item"><i class="bi bi-shield text-primary"></i><span
+                                    id="pokemon-defense" class="fw-bold"></span></li>
                         </ul>
                         <div class="card-body">
+                            <!-- Using Icons -->
+                            <span id="pokemon-rating">Rating:
+                                <!-- <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <i class="bi bi-star text-warning"></i> -->
+                            </span>
                             <!-- Carousel for displaying Pokemon evolution stages -->
-                            <div id="carouselEvolutions" class="carousel slide">
+                            <!-- <div id="carouselEvolutions" class="carousel slide">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
                                     <h4 class="display-6 text-center">Bulbasaur</h4>
@@ -70,20 +79,23 @@
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Next</span>
                                 </button>
-                              </div>
+                              </div> -->
 
                         </div>
                     </div>
 
                 </div>
+
+                <!-- second carousel item -->
                 <div class="carousel-item" data-bs-interval="2000">
-                    
+
                     <div class="card col-12 col-sm-8 col-lg-6 mx-auto">
                         <h5 class="card-title p-4 mx-auto h3">#1 Bulbasaur</h5>
-                        <img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" class="card-img-top w-75 mx-auto"
-                            alt="bulbasaur">
+                        <img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg"
+                            class="card-img-top w-75 mx-auto" alt="bulbasaur">
                         <div class="card-body">
-                            <p class="card-text">Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and
+                            <p class="card-text">Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes
+                                and
                                 a green
                                 bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that
                                 grows into
@@ -101,14 +113,17 @@
                     </div>
 
                 </div>
+
+                <!-- third carousel item -->
                 <div class="carousel-item">
-                    
+
                     <div class="card col-12 col-sm-8 col-lg-6 mx-auto">
                         <h5 class="card-title p-4 mx-auto h3">#1 Bulbasaur</h5>
-                        <img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" class="card-img-top w-75 mx-auto"
-                            alt="bulbasaur">
+                        <img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg"
+                            class="card-img-top w-75 mx-auto" alt="bulbasaur">
                         <div class="card-body">
-                            <p class="card-text">Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and
+                            <p class="card-text">Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes
+                                and
                                 a green
                                 bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that
                                 grows into
@@ -119,50 +134,151 @@
                             <li class="list-group-item"><span class="fw-bold">Attack:</span> 49</li>
                             <li class="list-group-item"><span class="fw-bold">Defense:</span> 49</li>
                         </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPokedex"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselPokedex"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPokedex"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselPokedex"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+
         </div>
 
-
-
-
-    </div>
-    <!-- <div class="col-12 col-sm-6 col-lg-4 text-light"> -->
-
-    <!-- </div> -->
-    <!-- <div class="col-12 col-sm-6 col-lg-4     text-light"> -->
-        <!-- </div> -->
-
-        <!-- </div> -->
-        <!-- </div> -->
-
-
-
-
-
-
-
-
-
     </div>
 
 
 
+    <script>
+        // DATA SOURCE
+        const bulbasaur = {
+            id: 1,
+            name: "Bulbasaur",
+            description: "Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and a green bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that grows into a flower as it evolves.",
+            image: "https://img.pokemondb.net/artwork/large/bulbasaur.jpg",
+            hp: 45,
+            attack: 49,
+            defense: 49,
+            rating: 4.5,
+        }
+        const charmander = {
+            id: 2,
+            name: "Charmander",
+            description: "Charmander is a bipedal, reptilian Pokémon. Most of its body is colored orange, while its underbelly is light yellow and it has blue eyes. It has a flame at the end of its tail, which is said to signify its health.",
+            image: "https://img.pokemondb.net/artwork/large/charmander.jpg",
+            hp: 45,
+            attack: 49,
+            defense: 49,
+            rating: 3.5,
+        }
+        const squirtle = {
+            id: 3,
+            name: "Squirtle",
+            description: "Squirtle is a bipedal, reptilian Pokémon. It has a blue body with purple eyes, a light brown belly, and a tough red-brown shell on its back. It has a long tail that curls into a spiral.",
+            image: "https://img.pokemondb.net/artwork/avif/squirtle.avif",
+            hp: 45,
+            attack: 49,
+            defense: 49,
+            rating: 3.5,
+        }
+
+        // DOM ELEMENTS
+        const pokemonHeader = document.getElementById("pokemon-header")
+        const pokemonImg = document.getElementById("pokemon-img")
+        const pokemonDescription = document.getElementById("pokemon-description")
+        const pokemonHp = document.getElementById("pokemon-hp")
+        const pokemonAttack = document.getElementById("pokemon-attack")
+        const pokemonDefense = document.getElementById("pokemon-defense")
+        const pokemonRating = document.getElementById("pokemon-rating")
+
+        // Main function
+        renderCard(squirtle)
+        
+        
+        // Dom Manipulation Functions
+        function renderCard(pokemon) {
+            renderPokemonHeader(pokemon)
+            renderPokemonDescription(pokemon)
+            renderPokemonImage(pokemon)
+            renderPokemonStats(pokemon)
+            renderPokemonRating(pokemon)
+        }
+
+        function renderPokemonHeader(pokemon) {
+            pokemonHeader.innerText = `#${pokemon.id}: ${pokemon.name}`
+        }
+
+        function renderPokemonImage(pokemon) {
+            pokemonImg.src = `${pokemon.image}`
+            pokemonImg.setAttribute("alt", `#${pokemon.id}-${pokemon.name}`)
+        }
+
+        function renderPokemonStats(pokemon) {
+            const newHpEl = document.createElement("span")
+            const newAttackEl = document.createElement("span")
+            const newDefenseEl = document.createElement("span")
+
+            pokemonHp.innerText = " HP:"
+            pokemonAttack.innerText = " Attack:"
+            pokemonDefense.innerText = " Defense:"
+
+            newHpEl.innerText = ` ${pokemon.hp}`
+            newAttackEl.innerText = ` ${pokemon.attack}`
+            newDefenseEl.innerText = ` ${pokemon.defense}`
+
+            newHpEl.classList = "fw-light"
+            newAttackEl.classList = "fw-light"
+            newDefenseEl.classList = "fw-light"
+
+            pokemonHp.appendChild(newHpEl)
+            pokemonAttack.appendChild(newAttackEl)
+            pokemonDefense.appendChild(newDefenseEl)
+        }
+
+        function renderPokemonDescription(pokemon) {
+            pokemonDescription.innerText = pokemon.description
+        }
+
+        // Let's write a function for the rating
+        // Loop from 1 to the rating, check if we need a half-star, fill the remainder with empty stars
+        function renderPokemonRating(pokemon) {
+            // Create full stars
+            for (i = 0; i < Math.trunc(pokemon.rating); i++) {
+                const newFullStarEl = document.createElement("i")
+                newFullStarEl.classList = "bi bi-star-fill text-warning"
+
+                pokemonRating.appendChild(newFullStarEl)
+            }
+
+            // Create a single half star, if necessary
+            if (pokemon.rating == Math.round(pokemon.rating)) {
+                // don't need a half-star
+            } else {
+                // need a half star
+                const newHalfStarEl = document.createElement("i")
+                newHalfStarEl.classList = "bi bi-star-half text-warning"
+
+                pokemonRating.appendChild(newHalfStarEl)
+            }
+
+            // Create empty stars
+            for (let i = Math.round(pokemon.rating); i < 5; i++) {
+                const newEmptyStarEl = document.createElement("i")
+                newEmptyStarEl.classList = "bi bi-star text-warning"
+
+                pokemonRating.appendChild(newEmptyStarEl)
+            }
+
+
+        }
+
+
+    </script>
 
 </body>
 
